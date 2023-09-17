@@ -14,6 +14,8 @@ public class GameController : MonoBehaviour
 
     [TextArea]
     public string introText;
+
+    public Action[] actions;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +61,23 @@ public class GameController : MonoBehaviour
         char[] delimiter = { ' ' };
         string[] seperatedWords = input.Split(delimiter);
 
+        foreach (Action action in actions) { 
+            if(action.keyword == seperatedWords[0])
+            {
+                currentText.text = "";
+                if(seperatedWords.Length > 1)
+                {
+                    action.RespondToInput(this, seperatedWords[1]);
+                    
+                }
+                else
+                {
+                    action.RespondToInput(this, "");
+                }
+                return;
+            }
+        }
 
-
-        currentText.text = "Nothing happens? (having trouble? Type 'Help'";
+        currentText.text = "Nothing happens. (having trouble? Type 'Help')";
     }
 }
