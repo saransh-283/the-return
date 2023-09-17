@@ -34,4 +34,33 @@ public class GameController : MonoBehaviour
         description += player.currentLocation.GetConnectionsText();
         currentText.text = description;
     }
+
+    public void TextEntered()
+    {
+        LogCurrentText();
+        ProcessInput(textEntryField.text);
+        textEntryField.text = "";
+        textEntryField.ActivateInputField();
+    }
+
+    void LogCurrentText()
+    {
+        logText.text += "\n\n";
+        logText.text += currentText.text;
+        
+        logText.text += "\n\n";
+        logText.text += "<color=#aaccaaff>" + textEntryField.text + "</color>";
+    }
+
+    void ProcessInput(string input)
+    {
+        input = input.ToLower();
+
+        char[] delimiter = { ' ' };
+        string[] seperatedWords = input.Split(delimiter);
+
+
+
+        currentText.text = "Nothing happens? (having trouble? Type 'Help'";
+    }
 }
