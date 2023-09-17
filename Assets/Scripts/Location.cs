@@ -21,4 +21,16 @@ public class Location : MonoBehaviour
     {
         
     }
+
+    public string GetConnectionsText()
+    {
+        string result = "";
+        foreach (Connection connection in connections) {
+            if (connection.connectionEnabled)
+            {
+                result += connection.description + "\n";
+            }
+        }
+        return result;
+    }
 }

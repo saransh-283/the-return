@@ -1155,6 +1155,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009350230}
   m_CullTransparentMesh: 1
+--- !u!1 &1059274434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059274436}
+  - component: {fileID: 1059274435}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1059274435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059274434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02b36b247be21841bf979be2a50ad59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 874277614}
+  textEntryField: {fileID: 1731048417}
+  logText: {fileID: 1443765381}
+  currentText: {fileID: 1009350233}
+  introText: 'A thunder crack of splintering wood wrenches you from darkness. A scream
+    of shock, heat and
+
+    sweat floods onto the cold shaking ground. Reborn in
+    moss and dirt you take one gasping breath of acrid smoke then another, and another.
+    You wretch and convulse awareness spreading feeling for breaks in muscle and
+    bone, stretching out to fingers toes then retreating to slow a pounding heart.
+    Senses waking you feel the moss on your face the earth in your mouth, aching
+    trembling pushing up back onto your knees you open your eyes.
+
+    Coming into
+    focus dry roots wrap round sap covered arms you tear them off wiping the dirt
+    from yourself. You grab a lose branch and use it to stand and prop yourself.
+    In front of you the earth fades into a dense white fog.'
+--- !u!4 &1059274436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059274434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341239235
 GameObject:
   m_ObjectHideFlags: 0
