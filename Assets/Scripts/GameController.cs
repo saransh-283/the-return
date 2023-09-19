@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
     {
         string description = player.currentLocation.description + "\n";
         description += player.currentLocation.GetConnectionsText();
+        description += player.currentLocation.GetItemsText();
         currentText.text = description;
     }
 
