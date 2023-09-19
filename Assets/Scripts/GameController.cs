@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         string[] seperatedWords = input.Split(delimiter);
 
         foreach (Action action in actions) { 
-            if(action.keyword == seperatedWords[0])
+            if(action.keyword.ToLower() == seperatedWords[0])
             {
                 currentText.text = "";
                 if(seperatedWords.Length > 1)
