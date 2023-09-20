@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: There is an antechamber to the east.
+  description: '<color=red><b>East: </b></color>There is an antechamber'
   location: {fileID: 1720989181}
   connectionEnabled: 1
 --- !u!4 &365990945
@@ -748,7 +748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: The wooden bridge leads south over the sea.
+  description: '<color=red><b>South: </b></color>The wooden bridge hangs  over the
+    sea.'
   location: {fileID: 1359776501}
   connectionEnabled: 1
 --- !u!4 &582742251
@@ -796,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: To the north is the rest of the Island
+  description: '<color=red><b>North: </b></color> You see the rest of the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
 --- !u!4 &595333225
@@ -844,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south is the island
+  description: '<color=red><b>South: </b></color> You see the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
 --- !u!4 &604908944
@@ -1116,7 +1117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: To the north a carved wooden door
+  description: '<color=red><b>North: </b></color> You see a carved wooden door.'
   location: {fileID: 1668639172}
   connectionEnabled: 1
 --- !u!4 &717894754
@@ -1305,7 +1306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: There is a bridge to the north.
+  description: '<color=red><b>North: </b></color> There is a bridge here'
   location: {fileID: 1359776501}
   connectionEnabled: 1
 --- !u!1 &822635058
@@ -1406,7 +1407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: To the west lies a shore.
+  description: '<color=red><b>West: </b></color> There is a shore here.'
   location: {fileID: 488374486}
   connectionEnabled: 1
 --- !u!1 &874277613
@@ -1486,8 +1487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: Steps snake northward, high up the rock face leading to a dark cave
-    entrance.
+  description: '<color=red><b>North: </b></color>Steps snake upwards leading up the
+    rock face to a dark cave entrance.'
   location: {fileID: 299812454}
   connectionEnabled: 1
 --- !u!4 &908897990
@@ -1577,7 +1578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: There is an antechamber to the west.
+  description: '<color=red><b>West: </b></color>There is an antechamber'
   location: {fileID: 822635060}
   connectionEnabled: 1
 --- !u!4 &991480750
@@ -2063,7 +2064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: West returns to the Chapel knave.
+  description: '<color=red><b>West: </b></color> Return to the Chapel knave.'
   location: {fileID: 299812454}
   connectionEnabled: 1
 --- !u!4 &1180256416
@@ -2111,7 +2112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: West
-  description: To the west is the island
+  description: '<color=red><b>West: </b></color> You see the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
 --- !u!4 &1250064379
@@ -2519,7 +2520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: Return to the chapel
+  description: '<color=red><b>South: </b></color> Return to the chapel.'
   location: {fileID: 299812454}
   connectionEnabled: 1
 --- !u!4 &1467146048
@@ -2709,7 +2710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: To the east is the island
+  description: '<color=red><b>East: </b></color> You see the island.'
   location: {fileID: 436197986}
   connectionEnabled: 1
 --- !u!1 &1587690530
@@ -2784,8 +2785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: North
-  description: Peering north across the sea to a dark shape hovers on the edge of
-    sight.
+  description: '<color=red><b>North: </b></color> You see a giant building hovering
+    on the edge of sight across the sea.'
   location: {fileID: 468945748}
   connectionEnabled: 1
 --- !u!4 &1636248472
@@ -2889,7 +2890,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south the steps snake down the cliff face to the shore.
+  description: '<color=red><b>South: </b></color>The steps snake down the cliff face
+    to the shore.'
   location: {fileID: 468945748}
   connectionEnabled: 1
 --- !u!4 &1671137236
@@ -3020,7 +3022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: East returns to the Chapel knave.
+  description: '<color=red><b>East: </b></color> Return to the Chapel knave.'
   location: {fileID: 1668639172}
   connectionEnabled: 1
 --- !u!1 &1717464107
@@ -3385,7 +3387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: South
-  description: To the south you a large tree.
+  description: '<color=red><b>South: </b></color> You see a large tree here.'
   location: {fileID: 1445083769}
   connectionEnabled: 1
 --- !u!4 &1771716524
@@ -3689,7 +3691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectionName: East
-  description: To the east lies a shore.
+  description: '<color=red><b>East: </b></color> There is a shore here.'
   location: {fileID: 436197986}
   connectionEnabled: 1
 --- !u!1 &1950455793
