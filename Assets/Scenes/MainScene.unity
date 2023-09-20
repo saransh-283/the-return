@@ -234,6 +234,7 @@ MonoBehaviour:
   - {fileID: 2075009950}
   - {fileID: 1843044575}
   - {fileID: 1375214900}
+  backgroundImage: {fileID: 21300000, guid: 6ea50a59b29ac2044b766e9d714ad98a, type: 3}
 --- !u!4 &299812455
 Transform:
   m_ObjectHideFlags: 0
@@ -456,6 +457,7 @@ MonoBehaviour:
   connections:
   - {fileID: 1250064378}
   items: []
+  backgroundImage: {fileID: 21300000, guid: e6d165a2c2c615943b67e674c2775632, type: 3}
 --- !u!1 &468945747
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +495,7 @@ MonoBehaviour:
   - {fileID: 908897989}
   - {fileID: 582742250}
   items: []
+  backgroundImage: {fileID: 21300000, guid: 800b45d3a4664fe42831cf625fd36e03, type: 3}
 --- !u!4 &468945749
 Transform:
   m_ObjectHideFlags: 0
@@ -545,6 +548,7 @@ MonoBehaviour:
   connections:
   - {fileID: 1541628152}
   items: []
+  backgroundImage: {fileID: 21300000, guid: e9aabf39a60fac443b9583de4edc656f, type: 3}
 --- !u!4 &488374487
 Transform:
   m_ObjectHideFlags: 0
@@ -1356,6 +1360,7 @@ MonoBehaviour:
   - {fileID: 1712214453}
   items:
   - {fileID: 580178310}
+  backgroundImage: {fileID: 21300000, guid: def24925ac26bb94ab1938cf3feb9cf1, type: 3}
 --- !u!1 &831529981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,6 +1784,7 @@ MonoBehaviour:
   textEntryField: {fileID: 1129220033}
   logText: {fileID: 1443765381}
   currentText: {fileID: 1009350233}
+  backgroundImage: {fileID: 1826799539}
   introText: 'A thunder crack of splintering wood wrenches you from darkness. A scream
     of shock, heat and
 
@@ -2176,6 +2182,7 @@ MonoBehaviour:
   - {fileID: 1636248471}
   - {fileID: 604908943}
   items: []
+  backgroundImage: {fileID: 21300000, guid: d29cdfd2dc3c79e4897e6ba8a885676f, type: 3}
 --- !u!1 &1375214898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2488,7 @@ MonoBehaviour:
   - {fileID: 595333224}
   items:
   - {fileID: 1789833304}
+  backgroundImage: {fileID: 21300000, guid: d0344c83675d2814cba5721e852c1605, type: 3}
 --- !u!1 &1467146046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,6 +2593,7 @@ MonoBehaviour:
   - {fileID: 831529983}
   - {fileID: 1771716523}
   items: []
+  backgroundImage: {fileID: 21300000, guid: 26aeb9248b400e74993d30f6f64132e7, type: 3}
 --- !u!1 &1512820417
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2842,7 @@ MonoBehaviour:
   - {fileID: 1766212629}
   - {fileID: 1512820419}
   - {fileID: 1696571984}
+  backgroundImage: {fileID: 21300000, guid: e1e52d874a3340e44a1e7c29fd92f533, type: 3}
 --- !u!4 &1668639173
 Transform:
   m_ObjectHideFlags: 0
@@ -3102,6 +3112,7 @@ MonoBehaviour:
   - {fileID: 1180256415}
   items:
   - {fileID: 1807693993}
+  backgroundImage: {fileID: 21300000, guid: ef7d94ee5abcd9a488b0317003d085a6, type: 3}
 --- !u!4 &1720989182
 Transform:
   m_ObjectHideFlags: 0
@@ -3732,6 +3743,7 @@ MonoBehaviour:
     unknown."
   connections: []
   items: []
+  backgroundImage: {fileID: 0}
 --- !u!1 &1972623916
 GameObject:
   m_ObjectHideFlags: 0

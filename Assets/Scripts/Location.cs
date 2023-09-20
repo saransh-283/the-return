@@ -15,7 +15,7 @@ public class Location : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
-    public Image locationImage;
+    public Sprite backgroundImage;
     // Start is called before the first frame update
     void Start()
     {

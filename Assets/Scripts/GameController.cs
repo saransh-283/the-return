@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour
     public TMP_InputField textEntryField;
     public TextMeshProUGUI logText;
     public TextMeshProUGUI currentText;
+    public Image backgroundImage;
 
     [TextArea]
     public string introText;
@@ -37,6 +38,7 @@ public class GameController : MonoBehaviour
         description += player.currentLocation.GetItemsText();
         if (additive) currentText.text += "\n" + description;
         else currentText.text = description;
+        backgroundImage.sprite = player.currentLocation.backgroundImage;
     }
 
     public void TextEntered()
