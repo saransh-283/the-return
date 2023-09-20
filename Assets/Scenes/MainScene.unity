@@ -177,6 +177,7 @@ MonoBehaviour:
       blow the serpents head is cleaved from its body. Coins erupt from the severed
       neck, showering the room with gold. As the body slumps to the floor the coins
       pump forth like blood
+    textToMatch: 
     itemsToDisable:
     - {fileID: 1843044575}
     itemsToEnable:
@@ -188,6 +189,7 @@ MonoBehaviour:
     - {fileID: 991480749}
     - {fileID: 1671137235}
   targetItem: {fileID: 1843044575}
+  playerCanTalkTo: 0
 --- !u!1 &299812453
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +700,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &582742249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1520,8 @@ Transform:
   - {fileID: 1789833303}
   - {fileID: 2075009949}
   - {fileID: 1766212628}
+  - {fileID: 1512820418}
+  - {fileID: 1696571983}
   - {fileID: 1843044574}
   - {fileID: 1375214899}
   - {fileID: 1807693992}
@@ -1782,6 +1787,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 317f4df4884ab8b4dbce53c9f2f1619a, type: 2}
   - {fileID: 11400000, guid: 8f5941f11899c434b964f2e8d3ade194, type: 2}
   - {fileID: 11400000, guid: a5d3b412f76da114b85b2a87f7390382, type: 2}
+  - {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
+  - {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
 --- !u!4 &1059274436
 Transform:
   m_ObjectHideFlags: 0
@@ -2205,6 +2212,7 @@ MonoBehaviour:
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &1388980630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,6 +2263,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &1443765378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2569,73 @@ MonoBehaviour:
   - {fileID: 831529983}
   - {fileID: 1771716523}
   items: []
+--- !u!1 &1512820417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512820418}
+  - component: {fileID: 1512820419}
+  m_Layer: 0
+  m_Name: Ferryman2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512820418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512820417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923890154}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512820419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512820417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6799c6d2d66e6f44800218b81c950f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  description: a robed Ferryman
+  playerCanTake: 0
+  itemEnabled: 0
+  interactions:
+  - action: {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
+    response: Who is it that seeks passage?
+    textToMatch: merlin
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+  - action: {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
+    response: Give me payment
+    textToMatch: albion
+    itemsToDisable:
+    - {fileID: 1512820419}
+    itemsToEnable:
+    - {fileID: 1696571984}
+    connectionsToDisable: []
+    connectionsToEnable: []
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 1
 --- !u!1 &1541628150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,6 +2812,8 @@ MonoBehaviour:
   - {fileID: 1467146047}
   items:
   - {fileID: 1766212629}
+  - {fileID: 1512820419}
+  - {fileID: 1696571984}
 --- !u!4 &1668639173
 Transform:
   m_ObjectHideFlags: 0
@@ -2800,6 +2878,64 @@ Transform:
   m_Father: {fileID: 299812455}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1696571982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696571983}
+  - component: {fileID: 1696571984}
+  m_Layer: 0
+  m_Name: Ferryman3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696571983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696571982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923890154}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696571984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696571982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6799c6d2d66e6f44800218b81c950f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: ferryman
+  description: a robed Ferryman
+  playerCanTake: 0
+  itemEnabled: 0
+  interactions:
+  - action: {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
+    response: Give me payment
+    textToMatch: merlin
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 1
 --- !u!1 &1712214451
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,7 +3256,7 @@ GameObject:
   - component: {fileID: 1766212628}
   - component: {fileID: 1766212629}
   m_Layer: 0
-  m_Name: Ferryman
+  m_Name: Ferryman1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3153,12 +3289,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6799c6d2d66e6f44800218b81c950f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Ferryman
+  itemName: ferryman
   description: a robed Ferryman
   playerCanTake: 0
   itemEnabled: 1
-  interactions: []
+  interactions:
+  - action: {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
+    response: Who is it that seeks passage?
+    textToMatch: merlin
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+  - action: {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
+    response: Where do you seek?
+    textToMatch: merlin
+    itemsToDisable:
+    - {fileID: 1766212629}
+    itemsToEnable:
+    - {fileID: 1512820419}
+    connectionsToDisable: []
+    connectionsToEnable: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 1
 --- !u!1 &1771716522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,6 +3410,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &1807693991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3307,6 +3461,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &1843044573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3351,12 +3506,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6799c6d2d66e6f44800218b81c950f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Serpent
+  itemName: serpent
   description: a giant, snake-like Serpent
   playerCanTake: 0
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &1884979678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,6 +3917,7 @@ MonoBehaviour:
 
       well towering over
       you.'
+    textToMatch: 
     itemsToDisable:
     - {fileID: 2075009950}
     itemsToEnable:
@@ -3772,6 +3929,7 @@ MonoBehaviour:
     - {fileID: 1671137235}
     connectionsToEnable: []
   targetItem: {fileID: 0}
+  playerCanTalkTo: 0
 --- !u!1 &2110978187
 GameObject:
   m_ObjectHideFlags: 0

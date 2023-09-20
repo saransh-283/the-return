@@ -10,6 +10,8 @@ public class Interaction
     [TextArea]
     public string response;
 
+    public string textToMatch;
+
     public List<Item> itemsToDisable = new List<Item>();
     public List<Item> itemsToEnable = new List<Item>();
 
