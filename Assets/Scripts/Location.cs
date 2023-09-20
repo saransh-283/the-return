@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Location : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Location : MonoBehaviour
     public Connection[] connections;
 
     public List<Item> items = new List<Item>();
+
+    public Image locationImage;
     // Start is called before the first frame update
     void Start()
     {
