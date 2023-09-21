@@ -53,7 +53,7 @@ public class Item : MonoBehaviour
                 }
 
                 controller.currentText.text = interaction.response;
-                controller.DisplayLocation(true);
+                //controller.DisplayLocation(true);
                 return true;
             }
         }

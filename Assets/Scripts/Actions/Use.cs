@@ -17,7 +17,7 @@ public class Use : Action
             return;
         }
 
-        controller.currentText.text = "There is no " + noun;
+        controller.currentText.text = "There is no " + noun + " in your inventory";
 
     }
 

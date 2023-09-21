@@ -38,12 +38,15 @@ public class GameController : MonoBehaviour
 
     public void DisplayLocation(bool additive = false) 
     {
-        string description = player.currentLocation.description + "\n";
-        description += player.currentLocation.GetConnectionsText();
-        description += player.currentLocation.GetItemsText();
-        if (additive) currentText.text += "\n" + description;
-        else currentText.text = description;
-        backgroundImage.sprite = player.currentLocation.backgroundImage;
+        StartCoroutine(effects.LocationChangeFadeOutIn(() =>
+        {
+            string description = player.currentLocation.description + "\n";
+            description += player.currentLocation.GetConnectionsText();
+            description += player.currentLocation.GetItemsText();
+            if (additive) currentText.text += "\n" + description;
+            else currentText.text = description;
+            backgroundImage.sprite = player.currentLocation.backgroundImage;
+        }));
     }
 
     public void TextEntered()

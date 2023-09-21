@@ -7,6 +7,14 @@ using UnityEngine.UI;
 
 public class Effects : MonoBehaviour
 {
+    public Image blackScreen;
+
+    public delegate void LocationChangeDelegate();
+
+    private void Start()
+    {
+        blackScreen.enabled = true;
+    }
     public IEnumerator FadeOutAndReset(TMP_InputField inputField)
     {
         float duration =.3f;
@@ -25,5 +33,39 @@ public class Effects : MonoBehaviour
         inputField.textComponent.color = targetColor;
         inputField.text = "";
         inputField.textComponent.color = startColor;
+    }
+
+    public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation)
+    {
+        float duration = .3f;
+        float elapsedTime = 0f;
+
+        Color opaque = Color.black;
+        Color transparent = new Color(opaque.r,opaque.g,opaque.b,0);
+
+        if (!blackScreen.enabled)
+        {
+            blackScreen.enabled = true;
+            while (elapsedTime < duration)
+            {
+                Color tempColor = Color.Lerp(transparent, opaque, elapsedTime / duration);
+                blackScreen.color = tempColor;
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        changeLocation();
+
+        elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            Color tempColor = Color.Lerp(opaque, transparent, elapsedTime / duration);
+            blackScreen.color = tempColor;
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        blackScreen.enabled = false;
     }
 }
