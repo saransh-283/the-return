@@ -395,6 +395,7 @@ MonoBehaviour:
   targetItem: {fileID: 1843044575}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &299812453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &582742249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1581,67 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 2
   m_LayoutPriority: 1
+--- !u!1 &667444901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667444902}
+  - component: {fileID: 667444903}
+  m_Layer: 0
+  m_Name: Plaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &667444902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667444901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 923890154}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667444903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667444901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6799c6d2d66e6f44800218b81c950f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: plaque
+  description: A golden <b>Plaque</b> embedded in the floor
+  playerCanTake: 0
+  itemEnabled: 1
+  interactions:
+  - action: {fileID: 11400000, guid: e30e24fda0a10214bb9d9ae5f3bebda6, type: 2}
+    response: The plaque reads <b>"Beware those who enter the land of Saransh Kawadkar"</b>
+    textToMatch: 
+    itemsToDisable: []
+    itemsToEnable: []
+    connectionsToDisable: []
+    connectionsToEnable: []
+    teleportLocation: {fileID: 0}
+  targetItem: {fileID: 0}
+  playerCanTalkTo: 0
+  playerCanGiveTo: 0
+  playerCanRead: 1
 --- !u!1 &686709146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,6 +2136,7 @@ Transform:
   - {fileID: 1375214899}
   - {fileID: 1807693992}
   - {fileID: 580178309}
+  - {fileID: 667444902}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2182,6 +2246,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
   - {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
   - {fileID: 11400000, guid: 426efb857b7902e498d327d4d45df6ef, type: 2}
+  - {fileID: 11400000, guid: e30e24fda0a10214bb9d9ae5f3bebda6, type: 2}
 --- !u!4 &1059274436
 Transform:
   m_ObjectHideFlags: 0
@@ -2797,6 +2862,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1388980630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,6 +2915,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1443765378
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,7 +3221,8 @@ MonoBehaviour:
   - {fileID: 1884979680}
   - {fileID: 831529983}
   - {fileID: 1771716523}
-  items: []
+  items:
+  - {fileID: 667444903}
   backgroundImage: {fileID: 21300000, guid: 26aeb9248b400e74993d30f6f64132e7, type: 3}
 --- !u!1 &1512820417
 GameObject:
@@ -3226,6 +3294,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1541628150
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3698,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 1
+  playerCanRead: 0
 --- !u!1 &1712214451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,6 +4159,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1771716522
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4260,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1807693991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4250,6 +4322,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1826799537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,6 +4451,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &1884979678
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,6 +4760,7 @@ MonoBehaviour:
   targetItem: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
+  playerCanRead: 0
 --- !u!1 &2110978187
 GameObject:
   m_ObjectHideFlags: 0

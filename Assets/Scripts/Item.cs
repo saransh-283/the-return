@@ -19,13 +19,18 @@ public class Item : MonoBehaviour
 
     public bool playerCanTalkTo = false;
     public bool playerCanGiveTo = false;
+    public bool playerCanRead = true;
 
     public bool InteractWith(GameController controller,string actionsKeyword, string noun = "")
     {
         foreach (Interaction interaction in interactions) {
             if(interaction.action.keyword == actionsKeyword)
             {
-                if (noun != "" && noun.ToLower() != interaction.textToMatch.ToLower()) continue;
+                if (noun != "" && noun.ToLower() != interaction.textToMatch.ToLower())
+                {
+                Debug.Log(noun);
+                    continue;
+                }
                 foreach(Item disableItem in interaction.itemsToDisable)
                 {
                     disableItem.itemEnabled = false;

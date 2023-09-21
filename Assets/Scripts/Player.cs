@@ -92,4 +92,9 @@ public class Player : MonoBehaviour
         }
         return false;
     }
+
+    internal bool CanReadItem(GameController controller, Item item)
+    {
+        return item.playerCanRead;
+    }
 }
