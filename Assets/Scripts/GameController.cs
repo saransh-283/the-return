@@ -62,8 +62,8 @@ public class GameController : MonoBehaviour
         logText.text += "\n\n";
         logText.text += currentText.text;
         
-        logText.text += "\n\n";
-        logText.text += "<color=#aaccaaff>" + textEntryField.text + "</color>";
+        logText.text += "\n";
+        logText.text += "<b><font=\"Anonymous SDF\"><color=#aaccaaff>" + textEntryField.text + "</color></font></b>";
     }
 
     void ProcessInput(string input)
