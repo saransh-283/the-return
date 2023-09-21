@@ -28,7 +28,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Return) && textEntryField.text != "")
+        {
+            TextEntered();
+        }
     }
 
     public void DisplayLocation(bool additive = false) 
