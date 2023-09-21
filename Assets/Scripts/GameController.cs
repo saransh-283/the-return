@@ -17,6 +17,8 @@ public class GameController : MonoBehaviour
     public string introText;
 
     public Action[] actions;
+
+    public Effects effects;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +50,7 @@ public class GameController : MonoBehaviour
     {
         LogCurrentText();
         ProcessInput(textEntryField.text);
-        textEntryField.text = "";
+        StartCoroutine(effects.FadeOutAndReset(textEntryField));
         textEntryField.ActivateInputField();
     }
 
