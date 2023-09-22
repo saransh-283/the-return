@@ -16,10 +16,12 @@ public class Location : MonoBehaviour
     public List<Item> items = new List<Item>();
 
     public Sprite backgroundImage;
+
+    public AudioSource backgroundMusic;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame

@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
             if (additive) currentText.text += "\n" + description;
             else currentText.text = description;
             backgroundImage.sprite = player.currentLocation.backgroundImage;
-        }));
+        }, player.currentLocation.backgroundMusic));
     }
 
     public void TextEntered()

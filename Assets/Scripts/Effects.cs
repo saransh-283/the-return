@@ -35,7 +35,7 @@ public class Effects : MonoBehaviour
         inputField.textComponent.color = startColor;
     }
 
-    public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation)
+    public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation, AudioSource backgroundMusic)
     {
         float duration = .3f;
         float elapsedTime = 0f;
@@ -54,8 +54,9 @@ public class Effects : MonoBehaviour
                 yield return null;
             }
         }
-
+        SoundManager.StopAllAudio();
         changeLocation();
+        backgroundMusic.Play();
 
         elapsedTime = 0f;
 
