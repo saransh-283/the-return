@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(GameManager.instance.playerName);
         logText.text = introText;
         DisplayLocation();
         textEntryField.ActivateInputField();
