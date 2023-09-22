@@ -14,6 +14,7 @@ public class Get : Action
             {
                 if (item.playerCanTake)
                 {
+                    controller.effects.effectsSource.PlayOneShot(item.getSound);
                     controller.player.inventory.Add(item);
                     controller.player.currentLocation.items.Remove(item);
                     controller.currentText.text = "You take the " + noun;

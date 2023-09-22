@@ -17,6 +17,8 @@ public class Item : MonoBehaviour
 
     public Item targetItem = null;
 
+    public AudioClip getSound = null;
+
     public bool playerCanTalkTo = false;
     public bool playerCanGiveTo = false;
     public bool playerCanRead = true;
@@ -53,7 +55,7 @@ public class Item : MonoBehaviour
                 }
 
                 controller.currentText.text = interaction.response;
-                //controller.DisplayLocation(true);
+                controller.DisplayLocation(true);
                 return true;
             }
         }

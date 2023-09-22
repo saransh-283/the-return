@@ -485,6 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 1561564663}
   transitionSource: {fileID: 1684801979}
+  effectsSource: {fileID: 2102674611}
 --- !u!4 &97755232
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +500,7 @@ Transform:
   m_Children:
   - {fileID: 687456809}
   - {fileID: 1684801980}
+  - {fileID: 2102674612}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -569,6 +571,7 @@ MonoBehaviour:
     - {fileID: 1671137235}
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 1843044575}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -1864,6 +1867,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -2357,6 +2361,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 1
@@ -3872,6 +3877,7 @@ MonoBehaviour:
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  getSound: {fileID: 8300000, guid: 71bb37aaf901c1443a1061fea3b5eb25, type: 3}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -3925,6 +3931,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -4499,6 +4506,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -5251,6 +5259,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 1950455795}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 1
   playerCanRead: 0
@@ -5938,6 +5947,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 1
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -6040,6 +6050,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions: []
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -6102,6 +6113,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -6231,6 +6243,7 @@ MonoBehaviour:
   itemEnabled: 0
   interactions: []
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
@@ -6541,9 +6554,138 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
   targetItem: {fileID: 0}
+  getSound: {fileID: 0}
   playerCanTalkTo: 0
   playerCanGiveTo: 0
   playerCanRead: 0
+--- !u!1 &2102674610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102674612}
+  - component: {fileID: 2102674611}
+  m_Layer: 0
+  m_Name: EffectsSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2102674611
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102674610}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2102674612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102674610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97755232}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110978187
 GameObject:
   m_ObjectHideFlags: 0

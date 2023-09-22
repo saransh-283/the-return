@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     {
         Debug.Log(GameManager.instance.playerName);
         logText.text = introText;
-        DisplayLocation();
+        LocationTransition();
         textEntryField.ActivateInputField();
     }
 
@@ -37,17 +37,22 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void DisplayLocation(bool additive = false) 
+    public void LocationTransition(bool additive = false) 
     {
         StartCoroutine(effects.LocationChangeFadeOutIn(() =>
         {
-            string description = player.currentLocation.description + "\n";
-            description += player.currentLocation.GetConnectionsText();
-            description += player.currentLocation.GetItemsText();
-            if (additive) currentText.text += "\n" + description;
-            else currentText.text = description;
+            DisplayLocation(additive);
             backgroundImage.sprite = player.currentLocation.backgroundImage;
         }, player.currentLocation.GetComponent<AudioSource>(), player.connection?.transitionSound));
+    }
+
+    public void DisplayLocation(bool additive)
+    {
+        string description = player.currentLocation.description + "\n";
+        description += player.currentLocation.GetConnectionsText();
+        description += player.currentLocation.GetItemsText();
+        if (additive) currentText.text += "\n" + description;
+        else currentText.text = description;
     }
 
     public void TextEntered()

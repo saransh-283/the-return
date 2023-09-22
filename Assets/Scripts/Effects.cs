@@ -9,6 +9,7 @@ public class Effects : MonoBehaviour
 {
     public Image blackScreen;
     public AudioSource transitionSource;
+    public AudioSource effectsSource;
 
     public delegate void LocationChangeDelegate();
 

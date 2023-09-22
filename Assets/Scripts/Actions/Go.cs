@@ -9,7 +9,7 @@ public class Go : Action
     {
         if (controller.player.ChangeLocation(controller, noun))
         {
-            controller.DisplayLocation();
+            controller.LocationTransition();
         }
         else
         {
