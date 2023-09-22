@@ -612,6 +612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 1561564663}
+  transitionSource: {fileID: 1684801979}
 --- !u!4 &97755232
 Transform:
   m_ObjectHideFlags: 0
@@ -626,6 +627,7 @@ Transform:
   m_Children:
   - {fileID: 687456809}
   - {fileID: 1529389816}
+  - {fileID: 1684801980}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1170,6 +1172,7 @@ MonoBehaviour:
   description: '<color=red><b>East: </b></color>There is an antechamber'
   location: {fileID: 1720989181}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &365990945
 Transform:
   m_ObjectHideFlags: 0
@@ -1771,6 +1774,7 @@ MonoBehaviour:
     sea.'
   location: {fileID: 1359776501}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 26e7bef65b3258f499eabb03b87cbe80, type: 3}
 --- !u!4 &582742251
 Transform:
   m_ObjectHideFlags: 0
@@ -1819,6 +1823,7 @@ MonoBehaviour:
   description: '<color=red><b>North: </b></color> You see the rest of the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!4 &595333225
 Transform:
   m_ObjectHideFlags: 0
@@ -1867,6 +1872,7 @@ MonoBehaviour:
   description: '<color=red><b>South: </b></color> You see the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 82307811d515d994a9514144f7dfdc99, type: 3}
 --- !u!4 &604908944
 Transform:
   m_ObjectHideFlags: 0
@@ -2363,6 +2369,7 @@ MonoBehaviour:
   description: '<color=red><b>North: </b></color> You see a carved wooden door.'
   location: {fileID: 1668639172}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &717894754
 Transform:
   m_ObjectHideFlags: 0
@@ -2426,6 +2433,7 @@ MonoBehaviour:
   description: '<color=red><b>North: </b></color> There is a bridge here'
   location: {fileID: 1359776501}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!1 &822635058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2536,7 @@ MonoBehaviour:
   description: '<color=red><b>West: </b></color> There is a shore here.'
   location: {fileID: 488374486}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!1 &844339047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,6 +2695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLocation: {fileID: 1493295871}
+  connection: {fileID: 0}
   inventory:
   - {fileID: 158828802}
 --- !u!4 &874277615
@@ -2737,6 +2747,7 @@ MonoBehaviour:
     rock face to a dark cave entrance.'
   location: {fileID: 299812454}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 26e7bef65b3258f499eabb03b87cbe80, type: 3}
 --- !u!4 &908897990
 Transform:
   m_ObjectHideFlags: 0
@@ -3084,6 +3095,7 @@ MonoBehaviour:
   description: '<color=red><b>West: </b></color>There is an antechamber'
   location: {fileID: 822635060}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &991480750
 Transform:
   m_ObjectHideFlags: 0
@@ -3426,6 +3438,7 @@ MonoBehaviour:
   description: '<color=red><b>West: </b></color> Return to the Chapel knave.'
   location: {fileID: 299812454}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &1180256416
 Transform:
   m_ObjectHideFlags: 0
@@ -3639,6 +3652,7 @@ MonoBehaviour:
   description: '<color=red><b>West: </b></color> You see the island.'
   location: {fileID: 1493295871}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!4 &1250064379
 Transform:
   m_ObjectHideFlags: 0
@@ -4215,6 +4229,7 @@ MonoBehaviour:
   description: '<color=red><b>South: </b></color> Return to the chapel.'
   location: {fileID: 299812454}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &1467146048
 Transform:
   m_ObjectHideFlags: 0
@@ -4447,6 +4462,7 @@ MonoBehaviour:
   description: '<color=red><b>East: </b></color> You see the island.'
   location: {fileID: 436197986}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!1 &1559632585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4862,6 +4878,7 @@ MonoBehaviour:
     on the edge of sight across the sea.'
   location: {fileID: 468945748}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 82307811d515d994a9514144f7dfdc99, type: 3}
 --- !u!4 &1636248472
 Transform:
   m_ObjectHideFlags: 0
@@ -4968,6 +4985,7 @@ MonoBehaviour:
     to the shore.'
   location: {fileID: 468945748}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!4 &1671137236
 Transform:
   m_ObjectHideFlags: 0
@@ -4981,6 +4999,134 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 299812455}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1684801978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684801980}
+  - component: {fileID: 1684801979}
+  m_Layer: 0
+  m_Name: TransitionSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1684801979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684801978}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1684801980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684801978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97755232}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1696571982
@@ -5100,6 +5246,7 @@ MonoBehaviour:
   description: '<color=red><b>East: </b></color> Return to the Chapel knave.'
   location: {fileID: 1668639172}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 28205ff081d2bdd4e94698573bf29f55, type: 3}
 --- !u!1 &1714269115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5675,6 +5822,7 @@ MonoBehaviour:
   description: '<color=red><b>South: </b></color> You see a large tree here.'
   location: {fileID: 1445083769}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!4 &1771716524
 Transform:
   m_ObjectHideFlags: 0
@@ -6110,6 +6258,7 @@ MonoBehaviour:
   description: '<color=red><b>East: </b></color> There is a shore here.'
   location: {fileID: 436197986}
   connectionEnabled: 1
+  transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!1 &1950455793
 GameObject:
   m_ObjectHideFlags: 0

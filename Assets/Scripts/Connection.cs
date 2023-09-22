@@ -10,4 +10,5 @@ public class Connection : MonoBehaviour
     public string description;
     public Location location;
     public bool connectionEnabled;
+    public AudioClip transitionSound;
 }

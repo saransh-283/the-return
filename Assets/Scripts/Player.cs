@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Location currentLocation;
+    public Connection connection = null;
 
     public List<Item> inventory = new List<Item>();
     // Start is called before the first frame update
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
 
     public bool ChangeLocation(GameController controller, string connectionNoun)
     {
-        Connection connection = currentLocation.GetConnection(connectionNoun);
+        connection = currentLocation.GetConnection(connectionNoun);
         if (connection != null)
         {
             if (connection.connectionEnabled)

@@ -8,8 +8,10 @@ using UnityEngine.UI;
 public class Effects : MonoBehaviour
 {
     public Image blackScreen;
+    public AudioSource transitionSource;
 
     public delegate void LocationChangeDelegate();
+
 
     private void Start()
     {
@@ -35,13 +37,20 @@ public class Effects : MonoBehaviour
         inputField.textComponent.color = startColor;
     }
 
-    public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation, AudioSource backgroundMusic)
+    public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation, AudioSource backgroundMusic, AudioClip transitionSound = null)
     {
-        float duration = .3f;
+        float duration = 1f;
         float elapsedTime = 0f;
 
         Color opaque = Color.black;
         Color transparent = new Color(opaque.r,opaque.g,opaque.b,0);
+
+        SoundManager.StopAllAudio();
+        if(transitionSound != null)
+        {
+            transitionSource.clip = transitionSound;
+            transitionSource.Play();
+        }
 
         if (!blackScreen.enabled)
         {
@@ -54,9 +63,8 @@ public class Effects : MonoBehaviour
                 yield return null;
             }
         }
-        SoundManager.StopAllAudio();
+        
         changeLocation();
-        backgroundMusic.Play();
 
         elapsedTime = 0f;
 
@@ -67,6 +75,9 @@ public class Effects : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
+        SoundManager.StopAllAudio();
+        backgroundMusic.Play();
         blackScreen.enabled = false;
     }
 }
