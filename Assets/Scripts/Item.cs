@@ -30,7 +30,6 @@ public class Item : MonoBehaviour
             {
                 if (noun != "" && noun.ToLower() != interaction.textToMatch.ToLower())
                 {
-                Debug.Log(noun);
                     continue;
                 }
                 foreach(Item disableItem in interaction.itemsToDisable)
@@ -52,6 +51,10 @@ public class Item : MonoBehaviour
                 if(interaction.teleportLocation != null)
                 {
                     controller.player.Teleport(controller, interaction.teleportLocation);
+                }
+                if (interaction.interactionAudio != null)
+                {
+                    StartCoroutine(SoundManager.PlaySound(interaction.interactionAudio, controller.effects.effectsSource));
                 }
 
                 controller.currentText.text = interaction.response;

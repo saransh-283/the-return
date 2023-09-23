@@ -19,4 +19,6 @@ public class Interaction
     public List<Connection> connectionsToEnable = new List<Connection>();
 
     public Location teleportLocation = null;
+
+    public AudioClip interactionAudio;
 }
