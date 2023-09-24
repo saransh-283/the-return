@@ -22,7 +22,6 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(GameManager.instance.playerName);
         logText.text = introText;
         LocationTransition();
         textEntryField.ActivateInputField();
@@ -43,7 +42,7 @@ public class GameController : MonoBehaviour
         {
             DisplayLocation(additive);
             backgroundImage.sprite = player.currentLocation.backgroundImage;
-        }, player.currentLocation.GetComponent<AudioSource>(), player.connection?.transitionSound));
+        }, this));
     }
 
     public void DisplayLocation(bool additive)
