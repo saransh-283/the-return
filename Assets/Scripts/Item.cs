@@ -23,11 +23,17 @@ public class Item : MonoBehaviour
     public bool playerCanGiveTo = false;
     public bool playerCanRead = true;
 
-    public bool InteractWith(GameController controller,string actionsKeyword, string noun = "")
+    public bool InteractWith(GameController controller, string actionsKeyword, string noun = "")
     {
         foreach (Interaction interaction in interactions) {
             if(interaction.action.keyword == actionsKeyword)
             {
+                if (interaction.usesPlayerName)
+                {
+                    string playerName = GameManager.instance.playerName;
+                    interaction.response = interaction.response.Replace("${playerName}", playerName);
+                    interaction.textToMatch = playerName;
+                }
                 if (noun != "" && noun.ToLower() != interaction.textToMatch.ToLower())
                 {
                     continue;

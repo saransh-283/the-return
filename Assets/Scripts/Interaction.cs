@@ -21,4 +21,6 @@ public class Interaction
     public Location teleportLocation = null;
 
     public AudioClip interactionAudio;
+
+    public bool usesPlayerName = false;
 }

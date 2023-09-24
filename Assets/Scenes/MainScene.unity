@@ -443,6 +443,7 @@ MonoBehaviour:
     - {fileID: 1671137235}
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 8300000, guid: aa229b89844abe14da9db64051b658fa, type: 3}
+    usesPlayerName: 0
   targetItem: {fileID: 1843044575}
   getSound: {fileID: 0}
   playerCanTalkTo: 0
@@ -1740,6 +1741,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 0
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 0
@@ -2107,6 +2109,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 8300000, guid: ab09ec3abc21ce64b8c8f641639ca2fe, type: 3}
+    usesPlayerName: 0
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 0
@@ -4080,6 +4083,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 0
   - action: {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
     response: Give me payment
     textToMatch: albion
@@ -4091,6 +4095,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 0
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 1
@@ -4998,6 +5003,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 0
   - action: {fileID: 11400000, guid: 426efb857b7902e498d327d4d45df6ef, type: 2}
     response: 
     textToMatch: goldcoin
@@ -5007,6 +5013,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 1950455795}
     interactionAudio: {fileID: 8300000, guid: a280cdf28b153764b956019616f4b720, type: 3}
+    usesPlayerName: 0
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 1
@@ -5551,16 +5558,17 @@ MonoBehaviour:
   interactions:
   - action: {fileID: 11400000, guid: 3bb0749de47d5a649a4b6c1e5bd07bf3, type: 2}
     response: Who is it that seeks passage?
-    textToMatch: merlin
+    textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
     connectionsToDisable: []
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 1
   - action: {fileID: 11400000, guid: e2d7e6a51575f604e8da89fca488a136, type: 2}
     response: Where do you seek?
-    textToMatch: merlin
+    textToMatch: 
     itemsToDisable:
     - {fileID: 1766212629}
     itemsToEnable:
@@ -5569,6 +5577,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 1
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 1
@@ -5727,8 +5736,8 @@ MonoBehaviour:
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: 8f5941f11899c434b964f2e8d3ade194, type: 2}
-    response: "You pick up the stone head in both hands. You turn the face towards
-      you, it looks familiar. You mouth the word, \u201CMerlin\u201D."
+    response: You pick up the stone head in both hands. You turn the face towards
+      you, it looks familiar. You mouth the word, "${playerName}".
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -5736,6 +5745,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 0}
+    usesPlayerName: 1
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 0
@@ -6178,6 +6188,7 @@ MonoBehaviour:
     connectionsToEnable: []
     teleportLocation: {fileID: 0}
     interactionAudio: {fileID: 8300000, guid: e3cda66c912ae8f489aa65e12398831f, type: 3}
+    usesPlayerName: 0
   targetItem: {fileID: 0}
   getSound: {fileID: 0}
   playerCanTalkTo: 0

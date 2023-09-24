@@ -90,7 +90,7 @@ public class Effects : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
 
         // Display Description Fade Out
         elapsedTime = 0f;
