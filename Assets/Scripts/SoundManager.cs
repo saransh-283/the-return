@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 { 
-    public static void StopAllAudio()
+    public static IEnumerator StopAllAudio()
     {
         AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
 
@@ -12,6 +12,8 @@ public class SoundManager : MonoBehaviour
         {
             audioSource.Stop();
         }
+
+        yield return null;
     }
 
     public static IEnumerator PlaySound(AudioClip clip, AudioSource audioSource)

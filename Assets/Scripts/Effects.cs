@@ -41,6 +41,7 @@ public class Effects : MonoBehaviour
 
     public IEnumerator LocationChangeFadeOutIn(LocationChangeDelegate changeLocation, GameController controller)
     {
+        controller.textEntryField.interactable = false;
         float duration = 0.5f;
         float elapsedTime = 0f;
 
@@ -53,11 +54,10 @@ public class Effects : MonoBehaviour
         Color transparentWhite = new Color(opaqueWhite.r, opaqueWhite.g, opaqueWhite.b, 0);
 
         string description = controller.introText;
-
-        SoundManager.StopAllAudio();
+        StartCoroutine(SoundManager.StopAllAudio());
 
         // Play transition sound
-        if(transitionSound != null)
+        if (transitionSound != null)
         {
             transitionSource.clip = transitionSound;
             transitionSource.Play();
@@ -112,8 +112,9 @@ public class Effects : MonoBehaviour
             yield return null;
         }
 
-        SoundManager.StopAllAudio();
+        StartCoroutine(SoundManager.StopAllAudio());
         backgroundMusic.Play();
         blackScreen.enabled = false;
+        controller.textEntryField.interactable = true;
     }
 }
