@@ -101,6 +101,7 @@ public class Effects : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        descriptionText.text = "";
         // Black Screen Fade Out
         elapsedTime = 0f;
         while (elapsedTime < duration)

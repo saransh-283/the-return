@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public TMP_InputField nameInput;
 
     public string playerName;
 
@@ -23,8 +22,8 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    public void SetPlayerName()
+    public void SetPlayerName(string text)
     {
-        playerName = nameInput.text;
+        playerName = text;
     }
 }
