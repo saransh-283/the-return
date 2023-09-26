@@ -38,6 +38,10 @@ public class Player : MonoBehaviour
     public void Teleport (GameController controller, Location destination)
     {
         currentLocation = destination;
+        StartCoroutine(controller.effects.LocationChangeFadeOutIn(() =>
+        {
+            controller.backgroundImage.sprite = controller.player.currentLocation.backgroundImage;
+        }, controller));
     }
 
     internal bool CanUseItem(GameController controller, Item item)

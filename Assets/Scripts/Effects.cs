@@ -58,7 +58,7 @@ public class Effects : MonoBehaviour
         StartCoroutine(SoundManager.StopAllAudio());
 
         // Play transition sound
-        if (transitionSound != null)
+        if (transitionSound != null && controller.player.currentLocation.locationName != "The End")
         {
             transitionSource.clip = transitionSound;
             transitionSource.Play();

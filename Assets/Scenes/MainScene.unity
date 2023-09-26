@@ -547,7 +547,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5167,8 +5167,8 @@ MonoBehaviour:
     aside and you step onto the boat. As he casts off you look back once at this
     ghost land and then turn to face a wall of fog as you drift silently into the
     unknown."
-  backgroundImage: {fileID: 0}
-  clip: {fileID: 0}
+  backgroundImage: {fileID: 21300000, guid: 195d253c7a093a84fbd1d68bbe7b23f6, type: 3}
+  clip: {fileID: 8300000, guid: 2c014e00926e54c4ea1f44c666aef716, type: 3}
   volume: 0.4
   stereoPan: 0
   connections: []
