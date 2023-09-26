@@ -25,15 +25,18 @@ public class Examine : Action
     {
         foreach (Item item in items)
         {
-            if(item.itemName == noun)
+            if (item.itemEnabled)
             {
-                if (item.InteractWith(controller, "examine"))
+                if (item.itemName == noun)
                 {
+                    if (item.InteractWith(controller, "examine"))
+                    {
+                        return true;
+                    }
+                    controller.currentText.text = "You see " + item.description;
+
                     return true;
                 }
-                controller.currentText.text = "You see " + item.description;
-
-                return true;
             }
         }
         return false;

@@ -11,22 +11,15 @@ public class Location : MonoBehaviour
     [TextArea]
     public string description;
 
+    public Sprite backgroundImage;
+
+    public AudioClip clip;
+    public float volume = 0.4f;
+    public float stereoPan = 0;
+
     public Connection[] connections;
 
     public List<Item> items = new List<Item>();
-
-    public Sprite backgroundImage;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public string GetItemsText()
     {

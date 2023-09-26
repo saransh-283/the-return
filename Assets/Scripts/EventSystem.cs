@@ -16,13 +16,17 @@ public class EventSystem : MonoBehaviour
         // Initially, disable the button
         playButton.interactable = false;
 
+        nameInput.characterLimit = 10;
+        nameInput.ActivateInputField();
+
         // Add an event listener to the Input Field's text change event
         nameInput.onValueChanged.AddListener(SetPlayerName);
     }
     public void SetPlayerName(string newValue)
     {
-        GameManager.instance.SetPlayerName(nameInput.text);
-        playButton.interactable = !string.IsNullOrEmpty(newValue);
+        GameManager.instance.SetPlayerName(newValue);
+        
+        playButton.interactable = !string.IsNullOrEmpty(name);
     }
     public void ChangeScene()
     {

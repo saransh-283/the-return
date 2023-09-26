@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Effects : MonoBehaviour
 {
     public Image blackScreen;
+    public AudioSource backgroundMusicSource;
     public AudioSource transitionSource;
     public AudioSource effectsSource;
     public TextMeshProUGUI descriptionText;
@@ -45,7 +46,7 @@ public class Effects : MonoBehaviour
         float duration = 0.5f;
         float elapsedTime = 0f;
 
-        AudioSource backgroundMusic = controller.player.currentLocation.GetComponent<AudioSource>();
+        Location currentLocation = controller.player.currentLocation;
         AudioClip transitionSound = controller.player.connection?.transitionSound;
 
         Color opaqueBlack = Color.black;
@@ -113,8 +114,14 @@ public class Effects : MonoBehaviour
         }
 
         StartCoroutine(SoundManager.StopAllAudio());
-        backgroundMusic.Play();
+
+        backgroundMusicSource.clip = currentLocation.clip;
+        backgroundMusicSource.volume = currentLocation.volume;
+        backgroundMusicSource.panStereo = currentLocation.stereoPan;
+        backgroundMusicSource.Play();
+
         blackScreen.enabled = false;
         controller.textEntryField.interactable = true;
+        controller.textEntryField.ActivateInputField();
     }
 }

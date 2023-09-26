@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 1561564663}
+  backgroundMusicSource: {fileID: 321628581}
   transitionSource: {fileID: 1684801979}
   effectsSource: {fileID: 2102674611}
   descriptionText: {fileID: 1649740080}
@@ -373,6 +374,7 @@ Transform:
   m_Children:
   - {fileID: 1684801980}
   - {fileID: 2102674612}
+  - {fileID: 321628582}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -458,7 +460,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299812455}
-  - component: {fileID: 299812456}
   - component: {fileID: 299812454}
   m_Layer: 0
   m_Name: Chapel
@@ -482,6 +483,10 @@ MonoBehaviour:
   locationName: Chapel
   description: You see a dark ruined chapel. In the centre of a dark stone room a
     smashed statue, the plinth and lower half of a robed figure.
+  backgroundImage: {fileID: 21300000, guid: 6ea50a59b29ac2044b766e9d714ad98a, type: 3}
+  clip: {fileID: 8300000, guid: 375ea24372159bb4ba2d48a15ff21a5c, type: 3}
+  volume: 0.3
+  stereoPan: 0
   connections:
   - {fileID: 717894753}
   - {fileID: 365990944}
@@ -492,7 +497,6 @@ MonoBehaviour:
   - {fileID: 2075009950}
   - {fileID: 1843044575}
   - {fileID: 1375214900}
-  backgroundImage: {fileID: 21300000, guid: 6ea50a59b29ac2044b766e9d714ad98a, type: 3}
 --- !u!4 &299812455
 Transform:
   m_ObjectHideFlags: 0
@@ -512,21 +516,38 @@ Transform:
   m_Father: {fileID: 1587690531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &299812456
+--- !u!1 &321628580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321628582}
+  - component: {fileID: 321628581}
+  m_Layer: 0
+  m_Name: BgmSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &321628581
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299812453}
+  m_GameObject: {fileID: 321628580}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93fa0c55c12a1fa46beedb2d618025de, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_audioClip: {fileID: 8300000, guid: f65721e1bbb1c7e4e8e91ce15970f282, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -608,6 +629,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &321628582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321628580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 97755232}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &324185895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1054,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 436197985}
-  - component: {fileID: 436197987}
   - component: {fileID: 436197986}
   m_Layer: 0
   m_Name: East Shore
@@ -1058,106 +1093,13 @@ MonoBehaviour:
   locationName: East Shore
   description: You are on a black rock shore that leads to a still silver sea with
     no horizon
+  backgroundImage: {fileID: 21300000, guid: e6d165a2c2c615943b67e674c2775632, type: 3}
+  clip: {fileID: 8300000, guid: 79c0bee5291c1fa4191ae1aac1ff7293, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 1250064378}
   items: []
-  backgroundImage: {fileID: 21300000, guid: e6d165a2c2c615943b67e674c2775632, type: 3}
---- !u!82 &436197987
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436197984}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 79c0bee5291c1fa4191ae1aac1ff7293, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &468945747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,7 +1109,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468945749}
-  - component: {fileID: 468945750}
   - component: {fileID: 468945748}
   m_Layer: 0
   m_Name: Causeway
@@ -1192,11 +1133,14 @@ MonoBehaviour:
   description: "Reaching the shore, the walls of an ancient fortification are carved
     into the cliff face. At the top of the cliff a stone chapel looks out over the
     sea,\r"
+  backgroundImage: {fileID: 21300000, guid: 800b45d3a4664fe42831cf625fd36e03, type: 3}
+  clip: {fileID: 8300000, guid: 135d11ec66ec85945b26bef1eedba68b, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 908897989}
   - {fileID: 582742250}
   items: []
-  backgroundImage: {fileID: 21300000, guid: 800b45d3a4664fe42831cf625fd36e03, type: 3}
 --- !u!4 &468945749
 Transform:
   m_ObjectHideFlags: 0
@@ -1214,102 +1158,6 @@ Transform:
   m_Father: {fileID: 1587690531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &468945750
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468945747}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 135d11ec66ec85945b26bef1eedba68b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &488374485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1167,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488374487}
-  - component: {fileID: 488374488}
   - component: {fileID: 488374486}
   m_Layer: 0
   m_Name: West Shore
@@ -1343,10 +1190,13 @@ MonoBehaviour:
   locationName: West Shore
   description: You are on a black rock shore that leads to a still silver sea with
     no horizon
+  backgroundImage: {fileID: 21300000, guid: e9aabf39a60fac443b9583de4edc656f, type: 3}
+  clip: {fileID: 8300000, guid: 79c0bee5291c1fa4191ae1aac1ff7293, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 1541628152}
   items: []
-  backgroundImage: {fileID: 21300000, guid: e9aabf39a60fac443b9583de4edc656f, type: 3}
 --- !u!4 &488374487
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,102 +1213,6 @@ Transform:
   m_Father: {fileID: 1587690531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &488374488
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488374485}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 79c0bee5291c1fa4191ae1aac1ff7293, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,7 +1855,7 @@ MonoBehaviour:
   itemEnabled: 1
   interactions:
   - action: {fileID: 11400000, guid: e30e24fda0a10214bb9d9ae5f3bebda6, type: 2}
-    response: The plaque reads <b>"Beware those who enter the land of Saransh Kawadkar"</b>
+    response: The plaque reads <b>"Beware those who enter the land of Sark283"</b>
     textToMatch: 
     itemsToDisable: []
     itemsToEnable: []
@@ -2290,7 +2044,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 822635059}
-  - component: {fileID: 822635061}
   - component: {fileID: 822635060}
   m_Layer: 0
   m_Name: West Antechamber
@@ -2330,107 +2083,14 @@ MonoBehaviour:
   locationName: West Antechamber
   description: A dark antechamber, smashed and upturned pews, the wall is covered
     with faded artworks and tapestries.
+  backgroundImage: {fileID: 21300000, guid: def24925ac26bb94ab1938cf3feb9cf1, type: 3}
+  clip: {fileID: 8300000, guid: 375ea24372159bb4ba2d48a15ff21a5c, type: 3}
+  volume: 0.2
+  stereoPan: 0.52
   connections:
   - {fileID: 1712214453}
   items:
   - {fileID: 580178310}
-  backgroundImage: {fileID: 21300000, guid: def24925ac26bb94ab1938cf3feb9cf1, type: 3}
---- !u!82 &822635061
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822635058}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93fa0c55c12a1fa46beedb2d618025de, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0.52
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &831529981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,7 +2893,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1359776500}
-  - component: {fileID: 1359776502}
   - component: {fileID: 1359776501}
   m_Layer: 0
   m_Name: Bridge
@@ -3274,107 +2933,14 @@ MonoBehaviour:
   locationName: Bridge
   description: "You find yourself at the water\u2019s edge. Sea worn planks tied
     with barnacle encrusted ropes form a bridge over the water fading into the fog"
+  backgroundImage: {fileID: 21300000, guid: d29cdfd2dc3c79e4897e6ba8a885676f, type: 3}
+  clip: {fileID: 8300000, guid: 1957fa9b577138b4e82766f06997c961, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 1636248471}
   - {fileID: 604908943}
   items: []
-  backgroundImage: {fileID: 21300000, guid: d29cdfd2dc3c79e4897e6ba8a885676f, type: 3}
---- !u!82 &1359776502
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359776499}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1957fa9b577138b4e82766f06997c961, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1360146443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,7 +3245,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1445083768}
-  - component: {fileID: 1445083770}
   - component: {fileID: 1445083769}
   m_Layer: 0
   m_Name: Tree
@@ -3718,107 +3283,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: Tree
   description: You stand by the tree and touch its blackened and gnarled surface.
+  backgroundImage: {fileID: 21300000, guid: d0344c83675d2814cba5721e852c1605, type: 3}
+  clip: {fileID: 8300000, guid: f65721e1bbb1c7e4e8e91ce15970f282, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 595333224}
   items:
   - {fileID: 1789833304}
-  backgroundImage: {fileID: 21300000, guid: d0344c83675d2814cba5721e852c1605, type: 3}
---- !u!82 &1445083770
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445083767}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f65721e1bbb1c7e4e8e91ce15970f282, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1467146046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3349,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1493295870}
-  - component: {fileID: 1493295872}
   - component: {fileID: 1493295871}
   m_Layer: 0
   m_Name: Island
@@ -3919,6 +3390,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: Island
   description: You stand on a misty island.
+  backgroundImage: {fileID: 21300000, guid: 26aeb9248b400e74993d30f6f64132e7, type: 3}
+  clip: {fileID: 8300000, guid: f65721e1bbb1c7e4e8e91ce15970f282, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 822000629}
   - {fileID: 1884979680}
@@ -3926,103 +3401,6 @@ MonoBehaviour:
   - {fileID: 1771716523}
   items:
   - {fileID: 667444903}
-  backgroundImage: {fileID: 21300000, guid: 26aeb9248b400e74993d30f6f64132e7, type: 3}
---- !u!82 &1493295872
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1493295869}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f65721e1bbb1c7e4e8e91ce15970f282, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1512820417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,7 +3523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectionName: East
   description: '<color=red><b>East: </b></color> You see the island.'
-  location: {fileID: 436197986}
+  location: {fileID: 1493295871}
   connectionEnabled: 1
   transitionSound: {fileID: 8300000, guid: 903f819f9ee76fd4baa9f1e620917a50, type: 3}
 --- !u!1 &1559632585
@@ -4621,7 +3999,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1668639173}
-  - component: {fileID: 1668639174}
   - component: {fileID: 1668639172}
   m_Layer: 0
   m_Name: Dock
@@ -4646,13 +4023,16 @@ MonoBehaviour:
   description: You find yourself walking down a stone jetty, as you move forward,
     slowly a hooded figure materialises from the mist. A Ferryman stands in his boat,
     it rocks in the gathering wind ringing the arrival bell.
+  backgroundImage: {fileID: 21300000, guid: e1e52d874a3340e44a1e7c29fd92f533, type: 3}
+  clip: {fileID: 8300000, guid: aa340197e8057c542acc69d4dadccaa9, type: 3}
+  volume: 0.4
+  stereoPan: 0
   connections:
   - {fileID: 1467146047}
   items:
   - {fileID: 1766212629}
   - {fileID: 1512820419}
   - {fileID: 1696571984}
-  backgroundImage: {fileID: 21300000, guid: e1e52d874a3340e44a1e7c29fd92f533, type: 3}
 --- !u!4 &1668639173
 Transform:
   m_ObjectHideFlags: 0
@@ -4669,102 +4049,6 @@ Transform:
   m_Father: {fileID: 1587690531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1668639174
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1668639171}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa340197e8057c542acc69d4dadccaa9, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.4
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1671137234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5208,7 +4492,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1720989182}
-  - component: {fileID: 1720989183}
   - component: {fileID: 1720989181}
   m_Layer: 0
   m_Name: East Antechamber
@@ -5232,11 +4515,14 @@ MonoBehaviour:
   locationName: East Antechamber
   description: A dark antechamber, the remnants of the smashed statue scattered across
     the dusty stone floor.
+  backgroundImage: {fileID: 21300000, guid: ef7d94ee5abcd9a488b0317003d085a6, type: 3}
+  clip: {fileID: 8300000, guid: 375ea24372159bb4ba2d48a15ff21a5c, type: 3}
+  volume: 0.2
+  stereoPan: -0.52
   connections:
   - {fileID: 1180256415}
   items:
   - {fileID: 1807693993}
-  backgroundImage: {fileID: 21300000, guid: ef7d94ee5abcd9a488b0317003d085a6, type: 3}
 --- !u!4 &1720989182
 Transform:
   m_ObjectHideFlags: 0
@@ -5253,102 +4539,6 @@ Transform:
   m_Father: {fileID: 1587690531}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1720989183
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1720989180}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 93fa0c55c12a1fa46beedb2d618025de, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: -0.52
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1765769757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5977,9 +5167,12 @@ MonoBehaviour:
     aside and you step onto the boat. As he casts off you look back once at this
     ghost land and then turn to face a wall of fog as you drift silently into the
     unknown."
+  backgroundImage: {fileID: 0}
+  clip: {fileID: 0}
+  volume: 0.4
+  stereoPan: 0
   connections: []
   items: []
-  backgroundImage: {fileID: 0}
 --- !u!1 &2009642953
 GameObject:
   m_ObjectHideFlags: 0
