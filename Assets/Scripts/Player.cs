@@ -5,21 +5,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject gameUI;
+    public GameObject endUI;
     public Location currentLocation;
     public Connection connection = null;
 
     public List<Item> inventory = new List<Item>();
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public bool ChangeLocation(GameController controller, string connectionNoun)
     {
@@ -41,6 +32,8 @@ public class Player : MonoBehaviour
         StartCoroutine(controller.effects.LocationChangeFadeOutIn(() =>
         {
             controller.backgroundImage.sprite = controller.player.currentLocation.backgroundImage;
+            gameUI.SetActive(false);
+            endUI.SetActive(true);
         }, controller));
     }
 

@@ -9,7 +9,6 @@ public class Get : Action
     {
         foreach(Item item in controller.player.currentLocation.items)
         {
-            Debug.Log(noun);
             if(item.itemEnabled && item.itemName ==  noun)
             {
                 if (item.playerCanTake)
