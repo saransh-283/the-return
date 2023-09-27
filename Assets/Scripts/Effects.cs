@@ -49,10 +49,9 @@ public class Effects : MonoBehaviour
         Location currentLocation = controller.player.currentLocation;
         AudioClip transitionSound = controller.player.connection?.transitionSound;
 
-        Color opaqueBlack = Color.black;
-        Color transparentBlack = new Color(opaqueBlack.r,opaqueBlack.g,opaqueBlack.b,0);
-        Color opaqueWhite = Color.white;
-        Color transparentWhite = new Color(opaqueWhite.r, opaqueWhite.g, opaqueWhite.b, 0);
+        Color black = Color.black;
+        Color transparent = new Color(0f, 0f, 0f, 0f);
+        Color white = Color.white;
 
         string description = controller.introText;
         StartCoroutine(SoundManager.StopAllAudio());
@@ -71,7 +70,7 @@ public class Effects : MonoBehaviour
             blackScreen.enabled = true;
             while (elapsedTime < duration)
             {
-                Color tempColor = Color.Lerp(transparentBlack, opaqueBlack, elapsedTime / duration);
+                Color tempColor = Color.Lerp(transparent, black, elapsedTime / duration);
                 blackScreen.color = tempColor;
                 elapsedTime += Time.deltaTime;
                 yield return null;
@@ -85,7 +84,7 @@ public class Effects : MonoBehaviour
         while (elapsedTime < duration)
         {
             descriptionText.text = description;
-            Color tempColor = Color.Lerp(transparentWhite, opaqueWhite, elapsedTime / duration);
+            Color tempColor = Color.Lerp(transparent, white, elapsedTime / duration);
             descriptionText.color = tempColor;
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -97,7 +96,7 @@ public class Effects : MonoBehaviour
         elapsedTime = 0f;
         while (elapsedTime < duration)
         {
-            Color tempColor = Color.Lerp(opaqueWhite, transparentWhite, elapsedTime / duration);
+            Color tempColor = Color.Lerp(white, transparent, elapsedTime / duration);
             descriptionText.color = tempColor;
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -107,7 +106,7 @@ public class Effects : MonoBehaviour
         elapsedTime = 0f;
         while (elapsedTime < duration)
         {
-            Color tempColor = Color.Lerp(opaqueBlack, transparentBlack, elapsedTime / duration);
+            Color tempColor = Color.Lerp(black, transparent, elapsedTime / duration);
             blackScreen.color = tempColor;
             elapsedTime += Time.deltaTime;
             yield return null;

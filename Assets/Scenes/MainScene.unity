@@ -1223,7 +1223,7 @@ MonoBehaviour:
   description: "Reaching the shore, the walls of an ancient fortification are carved
     into the cliff face. At the top of the cliff a stone chapel looks out over the
     sea,\r"
-  backgroundImage: {fileID: 21300000, guid: 800b45d3a4664fe42831cf625fd36e03, type: 3}
+  backgroundImage: {fileID: 21300000, guid: 9452f8710f0670640a0738f016a5b5e7, type: 3}
   clip: {fileID: 8300000, guid: 135d11ec66ec85945b26bef1eedba68b, type: 3}
   volume: 0.4
   stereoPan: 0
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   locationName: West Shore
   description: You are on a black rock shore that leads to a still silver sea with
     no horizon
-  backgroundImage: {fileID: 21300000, guid: e9aabf39a60fac443b9583de4edc656f, type: 3}
+  backgroundImage: {fileID: 21300000, guid: e390426e9435d7c42a6837a6cce38732, type: 3}
   clip: {fileID: 8300000, guid: 79c0bee5291c1fa4191ae1aac1ff7293, type: 3}
   volume: 0.4
   stereoPan: 0
@@ -5193,7 +5193,7 @@ MonoBehaviour:
   locationName: East Antechamber
   description: A dark antechamber, the remnants of the smashed statue scattered across
     the dusty stone floor.
-  backgroundImage: {fileID: 21300000, guid: ef7d94ee5abcd9a488b0317003d085a6, type: 3}
+  backgroundImage: {fileID: 21300000, guid: ceb5c40abd834ea4a9da64c3881867ee, type: 3}
   clip: {fileID: 8300000, guid: 375ea24372159bb4ba2d48a15ff21a5c, type: 3}
   volume: 0.2
   stereoPan: -0.52
@@ -5980,7 +5980,7 @@ MonoBehaviour:
     aside and you step onto the boat. As he casts off you look back once at this
     ghost land and then turn to face a wall of fog as you drift silently into the
     unknown."
-  backgroundImage: {fileID: 21300000, guid: 195d253c7a093a84fbd1d68bbe7b23f6, type: 3}
+  backgroundImage: {fileID: 21300000, guid: da14e6783b14aac43b86c309dd44adc5, type: 3}
   clip: {fileID: 8300000, guid: 2c014e00926e54c4ea1f44c666aef716, type: 3}
   volume: 0.4
   stereoPan: 0
